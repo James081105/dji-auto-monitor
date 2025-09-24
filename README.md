@@ -2,7 +2,7 @@
 
 ## 项目简介
 
-大疆商城商品监控系统用户用户方便快速监控到库存商品变化，支持bark推送、wxpusher以及pushplus
+大疆商城商品监控推送系统，让用户方便快速监控到库存商品变化，支持bark推送、wxpusher以及公众号推送，推送库存变化以及直接跳转付款链接的BP链接
 
 ## 项目截图
 <img width="1354" height="574" alt="ec4d97ce-d83f-424e-9b7c-964ffc3b39be" src="https://github.com/user-attachments/assets/cd27f8f1-874a-4f07-be7e-0b2476b28ec4" />
