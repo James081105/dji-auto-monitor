@@ -2,7 +2,21 @@
 
 ## 项目简介
 
-"监控端"是一个用于接收、搜索和处理无人机（可能为大疆DJI设备）推送数据的轻量级监控系统，适用于需要对无人机实时状态或飞行数据进行监控的场景。
+大疆商城商品监控系统用户用户方便快速监控到库存商品变化，支持bark推送、wxpusher以及pushplus
+
+## 项目截图
+<img width="1354" height="574" alt="ec4d97ce-d83f-424e-9b7c-964ffc3b39be" src="https://github.com/user-attachments/assets/cd27f8f1-874a-4f07-be7e-0b2476b28ec4" />
+<img width="1361" height="577" alt="202efa08-15d9-4309-a1bf-ef2f82e7ccce" src="https://github.com/user-attachments/assets/386f2bc9-c6c3-4e16-9a23-4fa96e84ba1e" />
+<img width="1312" height="570" alt="7d94a745-1e13-4359-87b2-aa160d33d749" src="https://github.com/user-attachments/assets/7b896388-3d90-4684-bbf4-f1d59246de07" />
+<img width="1366" height="606" alt="5b307710-55ec-4a21-b775-ba10b2f8b9c1" src="https://github.com/user-attachments/assets/78611d2c-ebb6-41e0-932b-cee2149e7158" />
+<img width="1362" height="597" alt="2aab3ef8-d0fe-4e1c-855d-a6fe0d47d5ac" src="https://github.com/user-attachments/assets/2c7e8e9f-2b06-46cf-bb5c-cdf09d7eb328" />
+<img width="1331" height="559" alt="0fe77f23-6304-47cd-b626-e1e2c8271543" src="https://github.com/user-attachments/assets/2fd6851f-02b6-45d6-b0d9-444d0d3af2cb" />
+
+
+## 联系方式
+
+v：james_hui666
+闲鱼：tb3345884683
 
 ### 目标用户
 - 系统集成商
@@ -15,7 +29,7 @@
 - `djipush.py`: 接收来自DJI设备或平台的数据推送
 
 ### 2. 主动查询
-- `djisearch.py`: 主动发起对DJI设备或服务器的查询请求，获取设备状态、位置等信息
+- `djisearch.py`: 发起搜索请求
 
 ### 3. 用户管理
 - Web管理界面：基于Flask框架实现的用户友好的管理界面
@@ -23,22 +37,12 @@
 - 多推送渠道支持：支持WxPusher和Bark推送通知
 
 ### 4. 配置管理
-- `config.yaml`: 存放系统配置参数，如API地址、认证信息、设备列表等
+- `config.yaml`: 存放系统配置参数，如API地址等
 - 基于YAML的配置管理，支持灵活部署
 
 ### 5. 定时任务
 - 每日8点自动执行用户授权到期检查
 - 支持调度器管理，可启动/停止监控任务
-
-## 技术架构
-
-```
-[DJI设备/平台] ←→ [djipush.py] ←→ [本地逻辑]
-                     ↓
-              [djisearch.py] → [DJI API]
-                     ↓
-               [config.yaml] ← 配置支撑
-```
 
 ## 技术选型
 
@@ -46,15 +50,6 @@
 - **Web管理界面**: Flask框架
 - **配置文件**: YAML格式
 - **通信协议**: HTTP/HTTPS
-- **依赖库**:
-  - requests >= 2.25.1
-  - PyYAML >= 5.4.1
-  - urllib3 >= 1.26.5
-  - flask >= 2.0.0
-  - flask-wtf >= 1.0.0
-  - wtforms >= 3.0.0
-  - prettytable >= 3.0.0
-  - watchdog >= 2.1.0,<3.0.0
 
 ## 安装与部署
 
